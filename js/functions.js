@@ -139,7 +139,7 @@ const progBar = (remain, dead_line) => {
     }else if(width >= 0 && width <= 30){
         width = `width:${width}%; background-color: pink;`;
     }else if(width >= 30 && width <= 40){
-        width = `width:${width}%; background-color: orenge`;
+        width = `width:${width}%; background-color: orange;`;
     }else if(width >= 41 && width <= 70){
         width = `width:${width}%; background-color: blue;`;
     }else if(width >= 71 && width <= 100){
