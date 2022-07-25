@@ -48,8 +48,13 @@ const getAllList = () => {
     let s = '';
     data.length > 1 ? s = 's' : s;
 
+    let totalAmmount = data.length ;
+
+    !data ? totalAmmount = 0 : totalAmmount;
+
+
     
-    ammount.innerHTML = `Total Item${s}: ${data.length}`;
+    ammount.innerHTML = `Total Item${s}: ${totalAmmount}`;
 }
 
 count = setInterval(() => {
