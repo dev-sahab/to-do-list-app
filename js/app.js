@@ -8,7 +8,7 @@ const ammount = document.getElementById('ammount');
 // clear intarval init 
 let count;
 
-// function for create a loop for to do list
+// function for create a loop for show to do list
 const getAllList = () => {
 
     //timestamp
@@ -57,9 +57,13 @@ const getAllList = () => {
     ammount.innerHTML = `Total Item${s}: ${totalAmmount}`;
 }
 
-count = setInterval(() => {
+// show all list with auto refresh
+setInterval(() => {
     getAllList();
 }, 1000);
+
+// show all list
+getAllList();
 
 // delete list data
 list_wrapper.onclick = (e) => {

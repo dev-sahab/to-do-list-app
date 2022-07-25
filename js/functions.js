@@ -76,7 +76,7 @@ const countDown = (start, deadline, clearInt = null) => {
         // let start_time = Date.now();
         // let end_time = new Date(date + ' ' + time);
 
-        let remaining_time = deadline - start; 
+        let remaining_time = (deadline - start) + 1000; 
         //add 1s for delay of intarval when submit
         
         // get value from time
@@ -96,7 +96,7 @@ const countDown = (start, deadline, clearInt = null) => {
         min < 10 ? min = '0' + min : min;
         sec < 10 ? sec = '0' + sec : sec;
 
-        if(total_sec == 0 || total_sec <= 0) {
+        if(total_sec <= 0) {
             clearInterval(clearInt);
 
             return `<span style="color:red;">Time over</span>`
